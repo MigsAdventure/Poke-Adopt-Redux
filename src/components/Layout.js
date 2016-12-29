@@ -1,9 +1,10 @@
 import React from 'react';
+import NavBar from './NavBar';
 
 export default function Layout(props) {
   return (
     <div>
-      <h2>Works!!!</h2>
+      <NavBar />
       {props.children}
     </div>
   );
