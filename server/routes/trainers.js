@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Trainer = require('../models/Trainer');
-const pokemon = require('../models/pokemon');
+const Pokemon = require('../models/Pokemon');
 
 router.route('/')
   .get((req, res) => {
@@ -28,7 +28,7 @@ router.route('/:id')
 
    .post((req, res) => {
      let pokemonId;
-     pokemon.create(req.body)
+     Pokemon.create(req.body)
      .then((pokemon) => {
        pokemonId = pokemon._id;
        return Trainer.findById(req.params.id);
