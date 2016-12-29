@@ -4,10 +4,9 @@ import Layout from './Layout';
 
 export default function CustomRouter() {
   return (
-    <Router>
-      <Route>
-        <IndexRoute path="/" component={Layout}></IndexRoute>
+    <Router history={browserHistory} >
+      <Route path="/" component={Layout} >
       </Route>
     </Router>
-  )
+  );
 }
