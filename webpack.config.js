@@ -27,8 +27,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react', 'stage-2']
-        }
+          presets: ['es2015', 'stage-2', 'react'],
+          plugins: ['transform-decorators-legacy'],
+        },
       },
       { test: /(\.css)$/, loaders: ['style', 'css'] },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
